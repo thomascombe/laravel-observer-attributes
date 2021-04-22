@@ -6,7 +6,7 @@ use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Thomascombe\LaravelObserverAttributes\Commands\LaravelObserverAttributesCommand;
 
-class LaravelObserverAttributesServiceProvider extends PackageServiceProvider
+class ObserverAttributesServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {

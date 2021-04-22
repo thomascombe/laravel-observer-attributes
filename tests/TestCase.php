@@ -4,7 +4,7 @@ namespace Thomascombe\LaravelObserverAttributes\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Thomascombe\LaravelObserverAttributes\LaravelObserverAttributesServiceProvider;
+use Thomascombe\LaravelObserverAttributes\ObserverAttributesServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -20,7 +20,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            LaravelObserverAttributesServiceProvider::class,
+            ObserverAttributesServiceProvider::class,
         ];
     }
 

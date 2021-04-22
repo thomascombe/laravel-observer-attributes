@@ -5,9 +5,9 @@ namespace Thomascombe\LaravelObserverAttributes;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Thomascombe\LaravelObserverAttributes\LaravelObserverAttributes
+ * @see \Thomascombe\LaravelObserverAttributes\ObserverAttributes
  */
-class LaravelObserverAttributesFacade extends Facade
+class ObserverAttributesFacade extends Facade
 {
     protected static function getFacadeAccessor(): string
     {

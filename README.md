@@ -25,13 +25,13 @@ composer require thomascombe/laravel_observer_attributes
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="Thomascombe\LaravelObserverAttributes\LaravelObserverAttributesServiceProvider" --tag="laravel_observer_attributes-migrations"
+php artisan vendor:publish --provider="Thomascombe\LaravelObserverAttributes\ObserverAttributesServiceProvider" --tag="laravel_observer_attributes-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="Thomascombe\LaravelObserverAttributes\LaravelObserverAttributesServiceProvider" --tag="laravel_observer_attributes-config"
+php artisan vendor:publish --provider="Thomascombe\LaravelObserverAttributes\ObserverAttributesServiceProvider" --tag="laravel_observer_attributes-config"
 ```
 
 This is the contents of the published config file:

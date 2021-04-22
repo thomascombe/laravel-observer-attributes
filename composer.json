@@ -30,8 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Thomascombe\\LaravelObserverAttributes\\": "src",
-            "Thomascombe\\LaravelObserverAttributes\\Database\\Factories\\": "database/factories"
+            "Thomascombe\\ObserverAttributes\\": "src",
         }
     },
     "autoload-dev": {
@@ -50,10 +49,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Thomascombe\\LaravelObserverAttributes\\LaravelObserverAttributesServiceProvider"
+                "ObserverAttributesServiceProvider"
             ],
             "aliases": {
-                "LaravelObserverAttributes": "Thomascombe\\LaravelObserverAttributes\\LaravelObserverAttributesFacade"
+                "LaravelObserverAttributes": "ObserverAttributesFacade"
             }
         }
     },

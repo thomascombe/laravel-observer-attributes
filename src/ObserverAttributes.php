@@ -2,6 +2,6 @@
 
 namespace Thomascombe\LaravelObserverAttributes;
 
-class LaravelObserverAttributes
+class ObserverAttributes
 {
 }
