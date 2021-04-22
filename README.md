@@ -1,21 +1,14 @@
-# :package_description
+# Use PHP 8 attributes to register eloquent model observers in a Laravel app
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/vendor_slug/package_slug.svg?style=flat-square)](https://packagist.org/packages/vendor_slug/package_slug)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/vendor_slug/package_slug/run-tests?label=tests)](https://github.com/vendor_slug/package_slug/actions?query=workflow%3Arun-tests+branch%3Amaster)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/vendor_slug/package_slug/Check%20&%20fix%20styling?label=code%20style)](https://github.com/vendor_slug/package_slug/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/vendor_slug/package_slug.svg?style=flat-square)](https://packagist.org/packages/vendor_slug/package_slug)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/thomascombe/laravel_observer_attributes.svg?style=flat-square)](https://packagist.org/packages/thomascombe/laravel_observer_attributes)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/thomascombe/laravel_observer_attributes/run-tests?label=tests)](https://github.com/thomascombe/laravel_observer_attributes/actions?query=workflow%3Arun-tests+branch%3Amaster)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/thomascombe/laravel_observer_attributes/Check%20&%20fix%20styling?label=code%20style)](https://github.com/thomascombe/laravel_observer_attributes/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/thomascombe/laravel_observer_attributes.svg?style=flat-square)](https://packagist.org/packages/thomascombe/laravel_observer_attributes)
 
-[](delete) 1) manually replace `:author_name, :author_username, auhor@domain.com, :vendor_name, vendor_slug, Vendor Name, :package_name, package_slug, skeleton, Skeleton, :package_description` with their correct values
-[](delete) in `CHANGELOG.md, LICENSE.md, README.md, ExampleTest.php, ModelFactory.php, Skeleton.php, SkeletonCommand.php, SkeletonFacade.php, SkeletonServiceProvider.php, TestCase.php, composer.json, create_skeleton_table.php.stub`
-[](delete) and delete `configure-skeleton.sh`
-
-[](delete) 2) You can also run `./configure-skeleton.sh` to do this automatically.
-
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
 ## Support us
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/package-skeleton-laravel.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/package-skeleton-laravel)
+[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/package-laravel_observer_attributes-laravel.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/package-laravel_observer_attributes-laravel)
 
 We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
 
@@ -26,19 +19,19 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require vendor_slug/package_slug
+composer require thomascombe/laravel_observer_attributes
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="VendorName\Skeleton\SkeletonServiceProvider" --tag="package_slug-migrations"
+php artisan vendor:publish --provider="Thomascombe\LaravelObserverAttributes\LaravelObserverAttributesServiceProvider" --tag="laravel_observer_attributes-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="VendorName\Skeleton\SkeletonServiceProvider" --tag="package_slug-config"
+php artisan vendor:publish --provider="Thomascombe\LaravelObserverAttributes\LaravelObserverAttributesServiceProvider" --tag="laravel_observer_attributes-config"
 ```
 
 This is the contents of the published config file:
@@ -51,8 +44,8 @@ return [
 ## Usage
 
 ```php
-$skeleton = new VendorName\Skeleton();
-echo $skeleton->echoPhrase('Hello, Spatie!');
+$laravel_observer_attributes = new Thomascombe\LaravelObserverAttributes();
+echo $laravel_observer_attributes->echoPhrase('Hello, Spatie!');
 ```
 
 ## Testing
@@ -75,7 +68,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [thomascombe](https://github.com/thomascombe)
 - [All Contributors](../../contributors)
 
 ## License
