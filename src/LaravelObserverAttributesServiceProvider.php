@@ -17,9 +17,6 @@ class LaravelObserverAttributesServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel_observer_attributes')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel_observer_attributes_table')
-            ->hasCommand(LaravelObserverAttributesCommand::class);
+            ->hasConfigFile();
     }
 }
