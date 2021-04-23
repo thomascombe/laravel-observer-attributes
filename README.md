@@ -1,7 +1,7 @@
 # Use PHP 8 attributes to register eloquent model observers in a Laravel app
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/thomascombe/laravel-observer-attributes.svg?style=flat-square)](https://packagist.org/packages/thomascombe/laravel-observer-attributes)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/thomascombe/laravel-observer-attributes/tests?label=tests)](https://github.com/thomascombe/laravel-observer-attributes/actions?query=workflow%3Atests+branch%3Amaster)
+[![Tests](https://github.com/thomascombe/laravel-observer-attributes/actions/workflows/tests.yml/badge.svg)](https://github.com/thomascombe/laravel-observer-attributes/actions/workflows/tests.yml)
 [![PHPCS check](https://github.com/thomascombe/laravel-observer-attributes/actions/workflows/phpcs.yml/badge.svg)](https://github.com/thomascombe/laravel-observer-attributes/actions/workflows/phpcs.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/thomascombe/laravel-observer-attributes.svg?style=flat-square)](https://packagist.org/packages/thomascombe/laravel-observer-attributes)
 
