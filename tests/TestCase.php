@@ -5,19 +5,20 @@ namespace Thomascombe\ObserverAttributes\Tests;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Thomascombe\ObserverAttributes\ObserverAttributesServiceProvider;
+use Thomascombe\ObserverAttributes\ObserverRegistrar;
 
 class TestCase extends Orchestra
 {
+    protected ObserverRegistrar $observerRegistrar;
+
     public function setUp(): void
     {
         parent::setUp();
 
-        Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Spatie\\ObserverAttributes\\Database\\Factories\\'.class_basename($modelName).'Factory'
-        );
+        $this->observerRegistrar = (new ObserverRegistrar());
     }
 
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         return [
             ObserverAttributesServiceProvider::class,
@@ -27,10 +28,5 @@ class TestCase extends Orchestra
     public function getEnvironmentSetUp($app)
     {
         config()->set('database.default', 'testing');
-
-        /*
-        include_once __DIR__.'/../database/migrations/create_laravel-observer-attributes_table.php.stub';
-        (new \CreatePackageTable())->up();
-        */
     }
 }
