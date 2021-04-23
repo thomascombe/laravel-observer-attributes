@@ -4,9 +4,10 @@
     "keywords": [
         "thomascombe",
         "laravel",
-        "laravel_observer_attributes"
+        "php8",
+        "observer"
     ],
-    "homepage": "https://github.com/thomascombe/laravel_observer_attributes",
+    "homepage": "https://github.com/thomascombe/laravel-observer-attributes",
     "license": "MIT",
     "authors": [
         {
