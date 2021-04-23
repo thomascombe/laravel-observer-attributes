@@ -12,22 +12,22 @@ class ObserverRegistrar
 {
     protected string $basePath;
 
-//    protected string $rootNamespace;
+    //    protected string $rootNamespace;
 
     public function __construct()
     {
         $this->basePath = app()->path();
     }
 
-    public function registerDirectory(string | array $directories): void
+    public function registerDirectory(string|array $directories): void
     {
         $directories = Arr::wrap($directories);
 
         $filesInDirectories = (new Finder())->files()->name('*.php')->in($directories);
-        collect($filesInDirectories)->each(fn (\SplFileInfo $fileInfo) => $this->registerFile($fileInfo));
+        collect($filesInDirectories)->each(fn(\SplFileInfo $fileInfo) => $this->registerFile($fileInfo));
     }
 
-    protected function registerFile(string | \SplFileInfo $fileInfo): void
+    protected function registerFile(string|\SplFileInfo $fileInfo): void
     {
         $fileInfo = is_string($fileInfo) ? new \SplFileInfo($fileInfo) : $fileInfo;
 
@@ -49,14 +49,13 @@ class ObserverRegistrar
 
     protected function processAttributes(string $className): void
     {
-        if (! class_exists($className)) {
+        if (!class_exists($className)) {
             return;
         }
 
         try {
             $class = new \ReflectionClass($className);
-        }
-        catch (\ReflectionException $e) {
+        } catch (\ReflectionException $e) {
             Log::error("Error on processAttributes", ['error' => $e]);
         }
 
@@ -65,8 +64,7 @@ class ObserverRegistrar
         foreach ($attributes as $attribute) {
             try {
                 $attributeClass = $attribute->newInstance();
-            }
-            catch (\Throwable) {
+            } catch (\Throwable) {
                 continue;
             }
         }
