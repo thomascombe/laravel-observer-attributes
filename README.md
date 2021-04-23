@@ -1,3 +1,5 @@
+<p align="center"><img src="/art/social-banner.png" alt="Social Card of Laravel Observer Attributes"></p>
+
 # Use PHP 8 attributes to register eloquent model observers in a Laravel app
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/thomascombe/laravel-observer-attributes.svg?style=flat-square)](https://packagist.org/packages/thomascombe/laravel-observer-attributes)
@@ -22,6 +24,9 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'directories' => [
+        app_path('Models'),
+    ],
 ];
 ```
 
