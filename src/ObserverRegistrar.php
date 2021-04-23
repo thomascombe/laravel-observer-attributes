@@ -11,10 +11,28 @@ use Thomascombe\ObserverAttributes\Attributes\Observer;
 class ObserverRegistrar
 {
     protected string $basePath;
+    protected ?string $baseNamespace = null;
 
     public function __construct()
     {
         $this->basePath = app()->path();
+    }
+
+    public function setBaseNamespace(string $baseNamespace): self
+    {
+        $this->baseNamespace = $baseNamespace;
+        return $this;
+    }
+
+    public function setBasePath(string $basePath): self
+    {
+        $this->basePath = $basePath;
+        return $this;
+    }
+
+    protected function getBaseNamespace(): string
+    {
+        return rtrim($this->baseNamespace ?? app()->getNamespace(), '\\') . '\\';
     }
 
     public function registerDirectory(string|array $directories): void
@@ -38,11 +56,11 @@ class ObserverRegistrar
 
         $class = str_replace(
             [DIRECTORY_SEPARATOR, 'App\\'],
-            ['\\', app()->getNamespace()],
+            ['\\', $this->getBaseNamespace()],
             ucfirst(Str::replaceLast('.php', '', $class))
         );
 
-        return app()->getNamespace() . $class;
+        return $this->getBaseNamespace(). $class;
     }
 
     protected function processAttributes(string $className): void

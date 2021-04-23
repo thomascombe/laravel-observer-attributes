@@ -16,6 +16,8 @@ class TestCase extends Orchestra
         parent::setUp();
 
         $this->observerRegistrar = (new ObserverRegistrar());
+        $this->observerRegistrar->setBaseNamespace('Thomascombe\ObserverAttributes\Tests');
+        $this->observerRegistrar->setBasePath(__DIR__);
         $this->observerRegistrar->registerDirectory($this->getTestPath('TestObservers/Models'));
     }
 
