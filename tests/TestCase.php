@@ -16,6 +16,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         $this->observerRegistrar = (new ObserverRegistrar());
+        $this->observerRegistrar->registerDirectory($this->getTestPath('TestObservers/Models'));
     }
 
     protected function getPackageProviders($app): array
@@ -28,5 +29,10 @@ class TestCase extends Orchestra
     public function getEnvironmentSetUp($app)
     {
         config()->set('database.default', 'testing');
+    }
+
+    public function getTestPath(string $directory = null): string
+    {
+        return __DIR__ . ($directory ? '/' . $directory : '');
     }
 }

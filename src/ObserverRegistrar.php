@@ -12,8 +12,6 @@ class ObserverRegistrar
 {
     protected string $basePath;
 
-    //    protected string $rootNamespace;
-
     public function __construct()
     {
         $this->basePath = app()->path();
