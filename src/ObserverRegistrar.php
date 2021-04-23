@@ -3,6 +3,7 @@
 namespace Thomascombe\ObserverAttributes;
 
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Symfony\Component\Finder\Finder;
 use Thomascombe\ObserverAttributes\Attributes\Observer;
@@ -52,13 +53,17 @@ class ObserverRegistrar
             return;
         }
 
-        $class = new \ReflectionClass($className);
+        try {
+            $class = new \ReflectionClass($className);
+        }
+        catch (\ReflectionException $e) {
+            Log::error("Error on processAttributes", ['error' => $e]);
+        }
 
         $attributes = $class->getAttributes(Observer::class, \ReflectionAttribute::IS_INSTANCEOF);
 
         foreach ($attributes as $attribute) {
             try {
-                /** @var Observer $attributeClass */
                 $attributeClass = $attribute->newInstance();
             }
             catch (\Throwable) {
