@@ -16,16 +16,17 @@ class ObserverAttributesServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('observer_attributes')
+            ->name('observer-attributes')
             ->hasConfigFile();
     }
 
     public function packageBooted()
     {
         $registrar = new ObserverRegistrar();
-        $modelsDirectory = app_path('Models'); // TODO: use config
-        if (File::isDirectory($modelsDirectory)) {
-            $registrar->registerDirectory($modelsDirectory);
+        foreach (config('observer-attributes.directories', []) as $directory) {
+            if (File::isDirectory($directory)) {
+                $registrar->registerDirectory($directory);
+            }
         }
     }
 }
