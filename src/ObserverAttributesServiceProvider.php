@@ -2,6 +2,7 @@
 
 namespace Thomascombe\ObserverAttributes;
 
+use Illuminate\Support\Facades\File;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -22,6 +23,9 @@ class ObserverAttributesServiceProvider extends PackageServiceProvider
     public function packageBooted()
     {
         $registrar = new ObserverRegistrar();
-        $registrar->registerDirectory(app_path('Models'));
+        $modelsDirectory = app_path('Models'); // TODO: use config
+        if (File::isDirectory($modelsDirectory)) {
+            $registrar->registerDirectory($modelsDirectory);
+        }
     }
 }
