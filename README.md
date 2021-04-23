@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/thomascombe/laravel-observer-attributes.svg?style=flat-square)](https://packagist.org/packages/thomascombe/laravel-observer-attributes)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/thomascombe/laravel-observer-attributes/run-tests?label=tests)](https://github.com/thomascombe/laravel-observer-attributes/actions?query=workflow%3Arun-tests+branch%3Amaster)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/thomascombe/laravel-observer-attributes/Check%20&%20fix%20styling?label=code%20style)](https://github.com/thomascombe/laravel-observer-attributes/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
+[![PHPCS check](https://github.com/thomascombe/laravel-observer-attributes/actions/workflows/phpcs.yml/badge.svg)](https://github.com/thomascombe/laravel-observer-attributes/actions/workflows/phpcs.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/thomascombe/laravel-observer-attributes.svg?style=flat-square)](https://packagist.org/packages/thomascombe/laravel-observer-attributes)
 
 ## Installation
