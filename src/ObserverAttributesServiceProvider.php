@@ -1,10 +1,9 @@
 <?php
 
-namespace Thomascombe\LaravelObserverAttributes;
+namespace Thomascombe\ObserverAttributes;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Thomascombe\LaravelObserverAttributes\Commands\LaravelObserverAttributesCommand;
 
 class ObserverAttributesServiceProvider extends PackageServiceProvider
 {
@@ -16,7 +15,13 @@ class ObserverAttributesServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('laravel_observer_attributes')
+            ->name('observer_attributes')
             ->hasConfigFile();
+    }
+
+    public function packageBooted()
+    {
+        $registrar = new ObserverRegistrar();
+        $registrar->registerDirectory(app_path('Models'));
     }
 }

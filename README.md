@@ -19,19 +19,19 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require thomascombe/laravel_observer_attributes
+composer require thomascombe/laravel-observer-attributes
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="Thomascombe\LaravelObserverAttributes\ObserverAttributesServiceProvider" --tag="laravel_observer_attributes-migrations"
+php artisan vendor:publish --provider="Thomascombe\ObserverAttributes\ObserverAttributesServiceProvider" --tag="laravel_observer_attributes-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="Thomascombe\LaravelObserverAttributes\ObserverAttributesServiceProvider" --tag="laravel_observer_attributes-config"
+php artisan vendor:publish --provider="Thomascombe\ObserverAttributes\ObserverAttributesServiceProvider" --tag="laravel_observer_attributes-config"
 ```
 
 This is the contents of the published config file:
@@ -44,7 +44,7 @@ return [
 ## Usage
 
 ```php
-$laravel_observer_attributes = new Thomascombe\LaravelObserverAttributes();
+$laravel_observer_attributes = new Thomascombe\ObserverAttributes();
 echo $laravel_observer_attributes->echoPhrase('Hello, Spatie!');
 ```
 

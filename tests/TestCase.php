@@ -1,10 +1,10 @@
 <?php
 
-namespace Thomascombe\LaravelObserverAttributes\Tests;
+namespace Thomascombe\ObserverAttributes\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Thomascombe\LaravelObserverAttributes\ObserverAttributesServiceProvider;
+use Thomascombe\ObserverAttributes\ObserverAttributesServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Spatie\\LaravelObserverAttributes\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Spatie\\ObserverAttributes\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

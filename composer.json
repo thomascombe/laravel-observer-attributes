@@ -1,5 +1,5 @@
 {
-    "name": "thomascombe/laravel_observer_attributes",
+    "name": "thomascombe/laravel-observer-attributes",
     "description": "Use PHP 8 attributes to register eloquent model observers in a Laravel app",
     "keywords": [
         "thomascombe",
@@ -30,12 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Thomascombe\\ObserverAttributes\\": "src",
+            "Thomascombe\\ObserverAttributes\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Thomascombe\\LaravelObserverAttributes\\Tests\\": "tests"
+            "Thomascombe\\ObserverAttributes\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,11 +49,9 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ObserverAttributesServiceProvider"
+                "Thomascombe\\ObserverAttributes\\ObserverAttributesServiceProvider"
             ],
-            "aliases": {
-                "LaravelObserverAttributes": "ObserverAttributesFacade"
-            }
+            "aliases": {}
         }
     },
     "minimum-stability": "dev",
